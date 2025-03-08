@@ -1,0 +1,187 @@
+/* Utility Classes */
+.vh-100 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3289c8, #1e3a8a);
+    color: #fff;
+}
+
+.w-400 {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.w-400:hover {
+    transform: scale(1.02);
+}
+
+.w-10 { width: 10%; }
+.w-15 { width: 15%; }
+.w-25 {
+    width: 30%;  /* Set a fixed width */
+    max-width: 100%; /* Ensure it stays responsive */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;  /* Prevent inline spacing issues */
+    margin: 0 auto; /* Center the image */
+}
+
+@media (max-width: 768px) {
+    .w-25 {
+        width: 200px; /* Resize for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .w-25 {
+        width: 150px; /* Resize for mobile */
+    }
+}
+
+
+.fs-xs { font-size: 1rem; }
+.fs-sm { font-size: 1.4rem; }
+.fs-big { font-size: 5rem !important; font-weight: bold; }
+
+.text-center { text-align: center; }
+.text-bold { font-weight: bold; }
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #3289c8;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+/* Online Indicator */
+.online {
+    width: 12px;
+    height: 12px;
+    background: green;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 6px rgba(0, 255, 0, 0.8);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 4px rgba(0, 255, 0, 0.8); }
+    50% { box-shadow: 0 0 10px rgba(0, 255, 0, 1); }
+}
+
+/* Chat Box */
+.chat-box {
+    overflow-y: auto;
+    max-height: 50vh;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.chat-box:hover {
+    background: #eef1f5;
+}
+
+/* Message Styles */
+.rtext, .ltext {
+    max-width: 70%;
+    padding: 12px 18px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    transition: transform 0.2s;
+}
+
+.rtext {
+    background: #d1e7fd;
+    color: #333;
+    align-self: flex-end;
+}
+
+.ltext {
+    background: #3289c8;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.rtext:hover, .ltext:hover {
+    transform: scale(1.05);
+}
+
+/* Scrollbar Styling */
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #3289c8;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #1e3a8a;
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+    font-size: 1rem;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus {
+    border-color: #3289c8;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(50, 137, 200, 0.5);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: #3289c8;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background: #1e3a8a;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fs-big { font-size: 3rem !important; }
+    .rtext, .ltext { max-width: 85%; }
+    .w-25 { width: 40%; max-width: 120px; }
+}
+
+@media (max-width: 480px) {
+    .w-25 { width: 50%; max-width: 100px; }
+}
